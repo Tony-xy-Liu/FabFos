@@ -2390,7 +2390,7 @@ def fabfos_main(sys_args):
     fos_father = FabFos(args.fabfos_path)
     review_arguments(args, fos_father)
 
-    libraries = parse_miffed(args, fabfos=fos_father, clean=args.overwrite)
+    libraries:list[Miffed] = parse_miffed(args, fabfos=fos_father, clean=args.overwrite)
 
     ends_stats = FosmidEnds()
     if args.ends:
